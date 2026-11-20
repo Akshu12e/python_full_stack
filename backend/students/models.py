@@ -1,10 +1,10 @@
 from django.db import models
 
 # Create your models here.
-class Students(models.Model):
+class Student(models.Model):
     name=models.CharField(max_length=100)
-    email=models.IntegerField()
+    email=models.EmailField()
     age=models.IntegerField()
     department = models.CharField(max_length=100)
-    def _str_(self):
+    def __str__(self):
         return self.name
